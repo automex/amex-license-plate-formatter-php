@@ -25,7 +25,7 @@ This library can be used to validate and format license plate numbers.
 * Israel (unknown date-now)
 
 ## More
-Other countries will be added in the future
+* More countries will be added in the future
 
 # How to install
 
