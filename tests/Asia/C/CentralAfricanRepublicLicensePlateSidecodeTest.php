@@ -21,10 +21,10 @@ class CentralAfricanRepublicLicensePlateSidecodeTest extends TestCase
      */
     public function sideCodeDataProvider()
     {
-        return [
-            //['123СMD456', 'CMD'],
-            //['123СD456', 'CD'],
-            ['123K456', 'K'], 
-        ];
+        /* return [
+            ['123СMD456', 1],
+            ['123СD456', 1],
+            ['123K456', 1], 
+        ]; */
     }    
 }

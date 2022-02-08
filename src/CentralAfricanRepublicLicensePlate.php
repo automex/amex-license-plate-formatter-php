@@ -42,9 +42,11 @@ class CentralAfricanRepublicLicensePlate extends AbstractLicensePlate implements
         $regionCodesPrefixRegex = "(" . implode("|", $this->regionCodes) . ")";
 
         $this->sideCodes = [
-            "CMD" => "/^([\d]{3})(cmd|CMD)([\d]{3})$/",  
-            "CD"  => "/^([\d]{3})(cd|CD)([\d]{3})$/",  
-            "K"   => "/^([\d]{3})(k|K)([\d]{3})$/",  
+			1 => "/^([\d]{3})(([a-zA-Z]{3})([\d]{3})$/",
+			2 => "/^([\d]{3})([a-zA-Z]{2})([\d]{3})$/",
+            3 => "/^([\d]{3})([a-zA-Z]{1})([\d]{3})$/",
+            4 => "/^([\d]{3})([a-zA-Z]{3})([\d]{3})$/",
+			5 => "/^TA([\d]{3})({$regionCodesPrefixRegex})$/u"
         ];
     }
 
@@ -65,12 +67,13 @@ class CentralAfricanRepublicLicensePlate extends AbstractLicensePlate implements
 
         $parts = [];
         preg_match($this->sideCodes[$sideCode], $this->licenseplate, $parts);
+		
 
         switch ($sideCode) {
-			case 'CMD':
-				return $parts[1] . ' ' . $parts[2] . ' ' . $parts[3];
-				break;
-			case 'CD':
+			case 1:
+				return $parts[1] . ' ' . $parts[2];
+                break;
+			case 5:
 				return $parts[1] . ' ' . $parts[2] . ' ' . $parts[3];
 				break;
 			default:
