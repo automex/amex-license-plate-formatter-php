@@ -56,3 +56,7 @@ Since the license plate classes for each country implement the LicensePlateInter
 Country-specific methods may also be available. Please check the code of the specific class to get the complete picture.
 
 Please note that this library does not check if a license plate actually exists, nor does it exclude combinations that aren't allowed.
+
+# License
+
+The code and the documentation are released under the [LPGLv2.1 License](https://github.com/automex/amex-license-plate-formatter-php/blob/main/LICENSE).
