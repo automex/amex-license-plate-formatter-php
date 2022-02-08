@@ -1,0 +1,26 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "pgroot91",
+      "name": "Patrick Groot",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6934501?v=4",
+      "profile": "https://patrickgroot.com",
+      "contributions": [
+        "infra",
+        "test",
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "amex-license-plate-formatter-php",
+  "projectOwner": "automex",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
