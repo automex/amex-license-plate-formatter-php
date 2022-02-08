@@ -2,8 +2,8 @@
 
 namespace Amex\LicensePlate;
 
-require_once "AbstractLicensePlate.php";
-require_once "LicensePlateInterface.php";
+use Amex\LicensePlate\AbstractLicensePlate;
+use Amex\LicensePlate\LicensePlateInterface;
 
 /**
  * Finnish license plate formatted and utilities
