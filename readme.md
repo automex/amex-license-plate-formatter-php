@@ -8,7 +8,7 @@
 
 This library can be used to validate and format license plate numbers.
 
-# Countries currently supported
+# Countries supported
 
 ## Europe
 * Belgium (1971-now)
