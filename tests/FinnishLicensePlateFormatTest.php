@@ -69,14 +69,12 @@ class FinnishLicensePlateFormatTest extends TestCase
     {    
         $licenseplate = new FinnishLicensePlate('100EAI');
         $this->assertTrue($licenseplate->isValid());
-        var_dump($licenseplate->getSidecode());
         $this->assertEquals($licenseplate->format(), '100·EAI', $licenseplate->format() . "doesn't match expected result of '100·EAI'");
     }
     public function testFormatWorkVehicleShortLicensePlate()
     {    
         $licenseplate = new FinnishLicensePlate('561ZN');
         $this->assertTrue($licenseplate->isValid());
-        var_dump($licenseplate->getSidecode());
         $this->assertEquals($licenseplate->format(), '561·ZN', $licenseplate->format() . "doesn't match expected result of '561·ZN'");
     }
     
