@@ -1,46 +1,51 @@
 {
-  "name": "automex/amex-license-plate-formatter-php",
-  "description": "PHP library to validate and format license plate numbers.",
-  "keywords": [
-    "PHP",
-    "License plate"
-  ],
-  "homepage": "https://github.com/automex/amex-license-plate-formatter-php.git",
-  "license": "LGPL-2.1-only",
-  "authors": [
-    {
-      "name": "Bart Guliker",
-      "email": "bart1987@gmail.com"
+    "name": "automex/amex-license-plate-formatter-php",
+    "description": "PHP library to validate and format license plate numbers.",
+    "keywords": [
+        "Vehicle-registation-plate",
+        "Vehicle-license-plate",
+        "Registation-plate",
+        "License-plate",
+        "Motorcycle",
+        "Validator",
+        "Formatter",
+        "Vehicles",
+        "Vehicle",
+        "PHP",
+        "Car"
+    ],
+    "homepage": "https://github.com/automex/amex-license-plate-formatter-php.git",
+    "license": "LGPL-2.1-only",
+    "authors": [{
+            "name": "Bart Guliker",
+            "email": "bart1987@gmail.com"
+        }, {
+            "name": "Peter Mein",
+            "email": "peter@infratron.io"
+        }, {
+            "name": "Lucas van der Have",
+            "email": "lucas@dossierdata.nl"
+        }, {
+            "name": "Patrick Groot",
+            "email": "p.groot@automex.nl"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
     },
-    {
-      "name": "Peter Mein",
-      "email": "peter@infratron.io"
+    "require-dev": {
+        "phpunit/phpunit": "^7.0 | ^8.0 | ^9.0",
+        "phpunit/php-code-coverage": "^9.2",
+        "overtrue/phplint": "^3.0"
     },
-    {
-      "name": "Lucas van der Have",
-      "email": "lucas@dossierdata.nl"
+    "autoload": {
+        "psr-4": {
+            "Amex\\LicensePlate\\": ["src/", "tests/"]
+        }
     },
-	{
-	  "name": "Patrick Groot",
-	  "email": "p.groot@automex.nl"
-	}
-  ],
-  "require": {
-    "php": ">=7.1"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "^7.0 | ^8.0 | ^9.0",
-	"phpunit/php-code-coverage": "^9.2",
-    "overtrue/phplint": "^3.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "Amex\\LicensePlate\\": ["src/", "tests/"]
+    "scripts": {
+        "lint": "./vendor/bin/phplint --exclude=vendor -vvv",
+        "test": "./vendor/bin/phpunit tests/",
+        "testdox": "./vendor/bin/phpunit --testdox --colors=always --verbose tests/"
     }
-  },
-  "scripts": {
-    "lint": "./vendor/bin/phplint --exclude=vendor -vvv",
-    "test": "./vendor/bin/phpunit tests/",
-    "testdox": "./vendor/bin/phpunit --testdox --colors=always --verbose tests/"
-  }
 }
