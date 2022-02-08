@@ -14,8 +14,6 @@ use Amex\LicensePlate\LicensePlateInterface;
  */
 class GabonLicensePlate extends AbstractLicensePlate implements LicensePlateInterface
 {
-
-    
     // This is just a guess 1962-1989
     protected $regionCodesOld = [
         'GL1', // Estuaire
