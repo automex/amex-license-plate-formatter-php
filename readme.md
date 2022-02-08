@@ -7,7 +7,8 @@
 | Tests | [![Tests](https://github.com/automex/amex-license-plate-formatter-php/actions/workflows/ci-php.yml/badge.svg)](https://github.com/automex/amex-license-plate-formatter-php/actions/workflows/ci-php.yml) |
 
 This library can be used to validate and format license plate numbers.
-Countries currently supported:
+
+# Countries currently supported
 
 ## Europe
 * Belgium (1971-now)
