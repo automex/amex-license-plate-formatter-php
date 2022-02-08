@@ -2,9 +2,9 @@
 
 | CI | Status |
 | --- | --- |
-| Lint | [![Lint](https://github.com/automex/AmexLicensePlate/actions/workflows/phplint.yml/badge.svg)](https://github.com/automex/AmexLicensePlate/actions/workflows/phplint.yml) |
-| Coverage | [![Coverage](https://github.com/automex/AmexLicensePlate/actions/workflows/ci-coverage.yml/badge.svg)](https://github.com/automex/AmexLicensePlate/actions/workflows/ci-coverage.yml) |
-| Tests | [![Tests](https://github.com/automex/AmexLicensePlate/actions/workflows/ci-php.yml/badge.svg)](https://github.com/automex/AmexLicensePlate/actions/workflows/ci-php.yml) |
+| Lint | [![Lint](https://github.com/automex/amex-license-plate-formatter-php/actions/workflows/phplint.yml/badge.svg)](https://github.com/automex/amex-license-plate-formatter-php/actions/workflows/phplint.yml) |
+| Coverage | [![Coverage](https://github.com/automex/amex-license-plate-formatter-php/actions/workflows/ci-coverage.yml/badge.svg)](https://github.com/automex/amex-license-plate-formatter-php/actions/workflows/ci-coverage.yml) |
+| Tests | [![Tests](https://github.com/automex/amex-license-plate-formatter-php/actions/workflows/ci-php.yml/badge.svg)](https://github.com/automex/amex-license-plate-formatter-php/actions/workflows/ci-php.yml) |
 
 This library can be used to validate and format license plate numbers.
 Countries currently supported:
@@ -33,7 +33,7 @@ Add the following to your composer.json:
 ``` json
 {
     "require": {
-        "automex/amex-license-plate": "^1.0.0"
+        "automex/amex-license-plate-formatter-php": "^1.0.0"
     }
 }
 ```
@@ -44,7 +44,7 @@ Call the constructor of the license plate class of your choice with the user inp
 
 ``` php
 <?php
-$licenseplate = new \Intrepidity\LicensePlate\DutchLicensePlate('08ttnp');
+$licenseplate = new \Amex\LicensePlate\DutchLicensePlate('08ttnp');
 if($licenseplate->isValid())
 {
     echo $licenseplate->format(); // Outputs 08-TT-NP in this case
