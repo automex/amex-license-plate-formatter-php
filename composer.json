@@ -6,7 +6,7 @@
     "License plate"
   ],
   "homepage": "https://github.com/automex/amex-license-plate-formatter-php.git",
-  "license": "LGPL-2.0-only",
+  "license": "LGPL-2.1-only",
   "authors": [
     {
       "name": "Bart Guliker",
