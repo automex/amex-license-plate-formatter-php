@@ -9,11 +9,14 @@ use Amex\LicensePlate\LicensePlateInterface;
  * Gabon license plate formatted and utilities
  *
  * Class GabonLicensePlate
+ *
  * @package Amex\LicensePlate
  */
 class GabonLicensePlate extends AbstractLicensePlate implements LicensePlateInterface
-{    
-	// This is just a guess 1962-1989
+{
+
+    
+    // This is just a guess 1962-1989
     protected $regionCodesOld = [
         'GL1', // Estuaire
         'GL2', // Upper Ogooue
@@ -25,9 +28,9 @@ class GabonLicensePlate extends AbstractLicensePlate implements LicensePlateInte
         'GL8', // Seaside Ogove
         'GL9', // Will-Ntem
     ];
-	
-	// 1989-2013
-	protected $regionCodes = [
+    
+    // 1989-2013
+    protected $regionCodes = [
         'G1', // Estuaire
         'G2', // Upper Ogooue
         'G3', // Average Ogooue
@@ -39,7 +42,7 @@ class GabonLicensePlate extends AbstractLicensePlate implements LicensePlateInte
         'G9', // Will-Ntem
     ];
 
-	protected $sideCodes = [];
+    protected $sideCodes = [];
 
     public function __construct($licensePlate)
     {
@@ -58,7 +61,7 @@ class GabonLicensePlate extends AbstractLicensePlate implements LicensePlateInte
     }
 
     public function getSidecode()
-    {			
+    {            
         return $this->checkPatterns($this->sideCodes, $this->licenseplate);
     }
 
@@ -72,23 +75,23 @@ class GabonLicensePlate extends AbstractLicensePlate implements LicensePlateInte
             return false;
         }
 
-		$parts = [];
+        $parts = [];
         preg_match($this->sideCodes[$sideCode], $this->licenseplate, $parts);
 
         switch ($sideCode) {
-            case 'CD':
-                return $parts[1] . ' ' . $parts[2] . ' ' . $parts[3];
-				break;
-            case 'MT':
-                return $parts[1];
-				break;
-			case 1:
-            case 2:
-                return $parts[1] . ' ' . $parts[2] . '' . $parts[3];
-				break;
-            default:
-                return $parts[1] . ' ' . $parts[2] . ' ' . $parts[3];
-				break;
+        case 'CD':
+            return $parts[1] . ' ' . $parts[2] . ' ' . $parts[3];
+        break;
+        case 'MT':
+            return $parts[1];
+        break;
+        case 1:
+        case 2:
+            return $parts[1] . ' ' . $parts[2] . '' . $parts[3];
+        break;
+        default:
+            return $parts[1] . ' ' . $parts[2] . ' ' . $parts[3];
+        break;
         }
     }
     
