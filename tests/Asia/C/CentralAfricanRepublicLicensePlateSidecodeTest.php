@@ -21,10 +21,20 @@ class CentralAfricanRepublicLicensePlateSidecodeTest extends TestCase
      */
     public function sideCodeDataProvider()
     {
-        /* return [
-            ['123СMD456', 1],
-            ['123СD456', 1],
-            ['123K456', 1], 
-        ]; */
+        return [
+            ['DF364BB', 1],
+            ['YU364BB', false],
+            ['TF3364BB', 'T'],
+            ['ta123bb', 'T'], 
+            ['123k112', 'K'], 
+            ['123cd112', 'CD'], 
+            ['y Y 235 BG', 'YY'], 
+            ['wV 235 BG', 'WV'], 
+            ['Ww 235 BG', 'WW'], 
+            ['123cmd112', 'CMD'], 
+            ['zZ 463abg', 'ZZ'], 
+            ['ZZ334bb', 'ZZ'], 
+            ['123', false], 
+        ];
     }    
 }
