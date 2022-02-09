@@ -42,6 +42,13 @@ class CentralAfricanRepublicLicensePlateFormatTest extends TestCase
         $licenseplate = new CentralAfricanRepublicLicensePlate('DF364BB');
         $this->assertEquals($licenseplate->format(), "DF 364 BB");
         $this->assertTrue($licenseplate->isValid());
+
+        $licenseplate = new CentralAfricanRepublicLicensePlate('uz 364 bB');
+        $this->assertEquals($licenseplate->format(), "UZ 364 BB");
+        $this->assertTrue($licenseplate->isValid());
+
+        $licenseplate = new CentralAfricanRepublicLicensePlate('aZ 364 bB');
+        $this->assertFalse($licenseplate->format());
     }
     
     public function testformatAgriculturalLicensePlates()

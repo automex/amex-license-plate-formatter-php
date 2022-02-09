@@ -35,6 +35,7 @@ class CentralAfricanRepublicLicensePlateSidecodeTest extends TestCase
             ['zZ 463abg', 'ZZ'], 
             ['ZZ334bb', 'ZZ'], 
             ['123', false], 
+            ['somethingisteriblywrong', false],
         ];
     }    
 }
