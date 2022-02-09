@@ -28,6 +28,7 @@ This library can be used to validate and format license plate numbers.
 * Israel (unknown date-now)
 
 ## Africa
+* Central African Republic (2006 date-now)
 * Gabon (1962 date-now)
 
 ## More
