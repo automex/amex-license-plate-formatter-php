@@ -50,8 +50,6 @@ Or add the following to your composer.json:
 }
 ```
 
-And run `composer up`.
-
 # How to use
 
 Call the constructor of the license plate class of your choice with the user input as the first parameter:
