@@ -36,7 +36,11 @@ This library can be used to validate and format license plate numbers.
 
 # How to install
 
-Add the following to your composer.json:
+```
+composer require automex/amex-license-plate-formatter-php
+```
+
+Or add the following to your composer.json:
 
 ``` json
 {
@@ -45,6 +49,8 @@ Add the following to your composer.json:
     }
 }
 ```
+
+And run `composer up`.
 
 # How to use
 
