@@ -29,4 +29,22 @@ class NewZealandLicensePlateFormatTest extends TestCase
         $this->assertEquals($licenseplate->format(), "ABC298");
         $this->assertTrue($licenseplate->isValid());
     }
+    
+    public function testSidecode()
+    {
+        $licenseplate = new NewZealandLicensePlate('wu999');
+        $this->assertEquals($licenseplate->format(), 'WU999');
+        $this->assertEquals($licenseplate->getSidecode(), 1);
+        $this->assertTrue($licenseplate->isValid());
+        
+        $licenseplate = new NewZealandLicensePlate('wu3279');
+        $this->assertEquals($licenseplate->format(), 'WU3279');
+        $this->assertEquals($licenseplate->getSidecode(), 1);
+        $this->assertTrue($licenseplate->isValid());
+        
+        $licenseplate = new NewZealandLicensePlate('wK3279');
+        $this->assertEquals($licenseplate->format(), 'WK3279');
+        $this->assertEquals($licenseplate->getSidecode(), 1);
+        $this->assertTrue($licenseplate->isValid());
+    }
 }

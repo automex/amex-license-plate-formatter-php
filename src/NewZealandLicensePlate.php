@@ -6,9 +6,9 @@ use Amex\LicensePlate\AbstractLicensePlate;
 use Amex\LicensePlate\LicensePlateInterface;
 
 /**
- * Central African Republic license plate formatted and utilities.
+ * New Zealand license plate formatted and utilities.
  *
- * Class CentralAfricanRepublicLicensePlate.
+ * Class NewZealandLicensePlate.
  *
  * @package Amex\LicensePlate.
  */
@@ -79,7 +79,7 @@ class NewZealandLicensePlate extends AbstractLicensePlate implements LicensePlat
 
         //$regionCodePrefixRegex = "(" . implode("|", $this->regionCodes) . ")";
 
-        $exceptionsThreeLetterPrefixRegex = "(" . implode("|", $this->exceptionsThreeLetters) . ")";
+        $exceptionsThreeLetterRegex = "(" . implode("|", $this->exceptionsThreeLetters) . ")";
         
         /**
          * Some information related to the sidecodes and licenseplates from New Zealands.
@@ -89,10 +89,24 @@ class NewZealandLicensePlate extends AbstractLicensePlate implements LicensePlat
          * @return bool|int|string
          */
         $this->sideCodes = [
-            1 => "/^([a-zA-Z]{2})([\d]{1,4})$/u", // 1964 - 1996.
-            2 => "/^([a-zA-Z]{2})([\d]{4})$/u", // 1996 - 2001. 
-            3 => "/^((?!{$exceptionsThreeLetterPrefixRegex})[A-Za-z]{3})([1-9]\d\d)$/ui" // 2001 - now.
+            // Cars and heavy vehicles
+            1  => "/^([a-zA-Z]{2})([\d]{1,4})$/ui",                                  // 1964 - 1996.
+            // Still need to fix starting point of the plate UR for correctness.
+            2  => "/^((?!((WS|WT|WU)))[a-zA-Z]{2})([1-9]\d\d\d)$/ui",                // 1996 - 2001.
+            3  => "/^((?!{$exceptionsThreeLetterRegex})[A-Za-z]{3})([1-9]\d\d)$/ui", // 2001 - now.
+            // Caravans and trailers
+            4  => "/^([1-9]\d\d\d)([A-Z-a-z]{1})$/ui",                               // unknown.
+            5  => "/^([A-Z-a-z]{1})([1-9]\d\d\d)$/ui",                               // unknown.
+            6  => "/^([1-9]\d\d)([A-Za-z]{1}(?!((W|Y|Z)))[A-Za-z]{1})$/ui",          // unknown - 2009.
+            7  => "/^([A-Za-z]{1})([1-9]\d\d)([A-Za-z]{1})$/ui",                     // 2009 - 2014.  
+            8  => "/^([1-9]{1})([A-Za-z]{1})([1-9]\d\d)$/ui",                        // 2014 - 2019.
+            9  => "/^([1-9]\d)([A-Za-z]{1})([1-9]\d)$/ui",                           // 2019 - 2022.
+            10 => "/^([1-9]\d\d)([A-Za-z]{1})([1-9]{1})$/ui",                        // 2022 - now.
+            // Motorcycles and tractors
+            11 => "/^([1-9]{1}[0-9]{0,1})([A-Za-z]{3})$/ui",                         // unknown - 2009
+            12 => "/^([A-Za-z]{1})([1-9]{1})([A-Za-z]{3})$/ui",                      // 2009 - now
         ];
+
     }
 
     public function getSidecode()
@@ -114,6 +128,9 @@ class NewZealandLicensePlate extends AbstractLicensePlate implements LicensePlat
         preg_match($this->sideCodes[$sideCode], $this->licenseplate, $parts);
         
         switch ($sideCode) {
+            case 2:
+                return $parts[1] . '' . $parts[4];
+                break;
             case 3:
                 return $parts[1] . '' . $parts[3];
                 break;
