@@ -35,25 +35,40 @@ class NewZealandLicensePlate extends AbstractLicensePlate implements LicensePlat
         '1986' => array(''),
         '1987' => array('NA', 'NB', 'NC', 'ND', 'NF', 'NH', 'NI', 'NJ', 'NK', 'NL', 'NM', 'NN', 'NP'),
         '1988' => array('NO', 'NQ', 'NR', 'NS', 'NT', 'NU', 'NW', 'NX', 'NY', 'NZ', 'OA', 'OB'),
-        '1989' => array(''),
-        '1990' => array(''),
-        '1991' => array(''),
-        '1992' => array(''),
-        '1993' => array(''),
-        '1994' => array(''),
-        '1995' => array(''),
-        '1996' => array(''),
-        '1997' => array(''),
-        '1998' => array(''),
-        '1999' => array(''),
-        '2000' => array(''),
-        '2001' => array(''),
-        '1971' => array(''),
-        '1971' => array(''),
-        '1971' => array(''),
-        '1971' => array(''),
-        '1971' => array(''),
-        '1971' => array(''),
+        '1989' => array('OC', 'OD', 'OE', 'OF', 'OG', 'OH', 'OI', 'OJ', 'OK', 'OL', 'OM', 'ON', 'OO', 'OP', 'OQ', 'OS'),
+        '1990' => array('OR', 'OT', 'OU', 'OW', 'OX', 'OY', 'OZ', 'PA', 'PB', 'PC', 'PD', 'PE', 'PF', 'PG', 'PH', 'PI', 'PJ', 'PK', 'PL', 'PO'),
+        '1991' => array('PM', 'PN', 'PP', 'PQ', 'PR', 'PS', 'PU', 'PW', 'PX', 'PY', 'PZ', 'RA', 'RB', 'RC', 'RD'),
+        '1992' => array('RE', 'RF', 'RG', 'RH', 'RI', 'RJ', 'RK', 'RL', 'RM', 'RN', 'RO', 'RP', 'RQ', 'RR', 'RT'),
+        '1993' => array('RS', 'RU', 'RW', 'RX', 'RY', 'RZ', 'SA', 'SB', 'SC', 'SD', 'SE', 'SF'),
+        '1994' => array('SG', 'SH', 'SI', 'SJ', 'SK', 'SL', 'SM', 'SN', 'SO', 'SP', 'SQ', 'SR', 'SS', 'ST', 'SU', 'SW', 'SY', 'SX', 'SZ', 'TA'),
+        '1995' => array('TB', 'TC', 'TD', 'TE', 'TF', 'TG', 'TH', 'TI', 'TJ', 'TK', 'TL', 'TM', 'TN', 'TO', 'TP', 'TQ', 'TR', 'TS', 'TT', 'TW', 'TX'),
+        '1996' => array('TU', 'TY', 'TZ', 'UA', 'UB', 'UC', 'UD', 'UE', 'UF', 'UG', 'UH', 'UI', 'UJ', 'UK', 'UL' ,'UM', 'UN', 'UO', 'UP', 'UQ', 'UR', 'US', 'UT'),
+        '1997' => array('UU', 'UW', 'UX', 'UY', 'UZ', 'WA', 'WB', 'WC', 'WD', 'WE', 'WF', 'WG', 'WH', 'WI', 'WJ', 'WK', 'WL', 'WM', 'WN', 'WO', 'WP', 'WQ', 'WR', 'WS'),
+        '1998' => array('WT', 'WU', 'WW', 'WX', 'WY', 'WZ', 'XA', 'XB', 'XC', 'XD', 'XE', 'XF', 'XG', 'XH', 'XI', 'XJ', 'XK', 'XL', 'XM', 'XN', 'XO', 'XP', 'XQ'),
+        '1999' => array('XR', 'XS', 'XT', 'XU', 'XW', 'XX', 'XY', 'XZ', 'YA', 'YB', 'YC', 'YD', 'YE', 'YF', 'YG', 'YH', 'YI', 'YJ', 'YK', 'YL', 'YM', 'YN', 'YO', 'YP', 'YQ', 'YR', 'YS'),
+        '2000' => array('YT', 'YU', 'YW', 'YX', 'YY', 'YZ', 'ZA', 'ZB', 'ZC', 'ZD', 'ZE', 'ZF', 'ZG', 'ZH', 'ZI', 'ZJ', 'ZK', 'ZL', 'ZM', 'ZN', 'ZO', 'ZP', 'ZQ', 'ZR', 'ZS', 'ZT', 'ZU'),
+        '2001' => array('ZW', 'ZX', 'ZY', 'ZZ'),
+        '2002' => array(''),
+        '2003' => array(''),
+        '2004' => array(''),
+        '2005' => array(''),
+        '2006' => array(''),
+        '2007' => array(''),
+        '2008' => array(''),
+        '2009' => array(''),
+        '2010' => array(''),
+        '2011' => array(''),
+        '2012' => array(''),
+        '2013' => array(''),
+        '2014' => array(''),
+        '2015' => array(''),
+        '2016' => array(''),
+        '2017' => array(''),
+        '2018' => array(''),
+        '2019' => array(''),
+        '2020' => array(''),
+        '2021' => array(''),
+        '2022' => array(''),
     );
 
     protected $exceptionsTwoLetters = [
@@ -71,6 +86,10 @@ class NewZealandLicensePlate extends AbstractLicensePlate implements LicensePlat
         'GDA', 'GEA', 'GFA', 'GGA', 'GHA', 'MMM', 'NWA',
     ];
 
+    protected $exceptionsSkippedS1000 = [
+        'WS', 'WT', 'WU'
+    ];
+
     protected $sideCodes = [];
 
     public function __construct($licensePlate)
@@ -80,6 +99,7 @@ class NewZealandLicensePlate extends AbstractLicensePlate implements LicensePlat
         //$regionCodePrefixRegex = "(" . implode("|", $this->regionCodes) . ")";
 
         $exceptionsThreeLetterRegex = "(" . implode("|", $this->exceptionsThreeLetters) . ")";
+        $skipped = "(" . implode("|", $this->exceptionsSkippedS1000) . ")";
         
         /**
          * Some information related to the sidecodes and licenseplates from New Zealands.
@@ -90,10 +110,10 @@ class NewZealandLicensePlate extends AbstractLicensePlate implements LicensePlat
          */
         $this->sideCodes = [
             // Cars and heavy vehicles
-            1  => "/^((?!(WS|WT|WU))[A-Za-z]{2})([1-9][0-9]{0,4})$/ui",              // 1964 - 1996.
-            2  => "/^((?=(WS|WT|WU))[A-Za-z]{2})([1-9][0-9]{0,4})$/ui",              // 1996 - 2001.
+            1  => "/^((?!{$skipped})[A-Za-z]{2})([1-9][0-9]{0,4})$/ui",              // 1964 - 1996.
+            2  => "/^((?={$skipped})[A-Za-z]{2})([1-9][0-9]{0,4})$/ui",              // 1996 - 2001.
             // Still need to fix starting point of the plate UR for correctness 1-3. 
-            3  => "/^((?!(WS|WT|WU))[a-zA-Z]{2})([1-9]\d\d\d)$/ui",                  // 1996 - 2001.
+            3  => "/^((?!{$skipped})[a-zA-Z]{2})([1-9]\d\d\d)$/ui",                  // 1996 - 2001.
             4  => "/^((?!{$exceptionsThreeLetterRegex})[A-Za-z]{3})([1-9]\d\d)$/ui", // 2001 - now.
             // Caravans and trailers
             5  => "/^([1-9]\d\d\d)([A-Z-a-z]{1})$/ui",                               // unknown.
