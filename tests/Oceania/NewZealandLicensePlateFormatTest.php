@@ -30,21 +30,41 @@ class NewZealandLicensePlateFormatTest extends TestCase
         $this->assertTrue($licenseplate->isValid());
     }
     
-    public function testSidecode()
+    public function testSidecodeOne()
     {
         $licenseplate = new NewZealandLicensePlate('wu999');
         $this->assertEquals($licenseplate->format(), 'WU999');
-        $this->assertEquals($licenseplate->getSidecode(), 1);
+        var_dump($licenseplate->getSidecode());
         $this->assertTrue($licenseplate->isValid());
-        
+    }
+    public function testSidecodeTwo()
+    {  
         $licenseplate = new NewZealandLicensePlate('wu3279');
         $this->assertEquals($licenseplate->format(), 'WU3279');
-        $this->assertEquals($licenseplate->getSidecode(), 1);
+        var_dump($licenseplate->getSidecode());
         $this->assertTrue($licenseplate->isValid());
-        
+    }
+    public function testSidecodeThree()
+    {    
         $licenseplate = new NewZealandLicensePlate('wK3279');
         $this->assertEquals($licenseplate->format(), 'WK3279');
-        $this->assertEquals($licenseplate->getSidecode(), 1);
+        var_dump($licenseplate->getSidecode());
+        $this->assertTrue($licenseplate->isValid());
+    }
+
+    public function testFormatMotorcycleLicensePlate()
+    {    
+        $licenseplate = new NewZealandLicensePlate('wk 567');
+        $this->assertEquals($licenseplate->format(), 'WK567');
+        var_dump($licenseplate->getSidecode());
+        $this->assertTrue($licenseplate->isValid());
+    }
+
+    public function testFormatTrailerLicensePlate()
+    {    
+        $licenseplate = new NewZealandLicensePlate('2485 r');
+        $this->assertEquals($licenseplate->format(), '2485R');
+        var_dump($licenseplate->getSidecode());
         $this->assertTrue($licenseplate->isValid());
     }
 }
