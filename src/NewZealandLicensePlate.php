@@ -96,8 +96,6 @@ class NewZealandLicensePlate extends AbstractLicensePlate implements LicensePlat
     {
         parent::__construct(strtoupper($licensePlate));
 
-        //$regionCodePrefixRegex = "(" . implode("|", $this->regionCodes) . ")";
-
         $exceptionsThreeLetterRegex = "(" . implode("|", $this->exceptionsThreeLetters) . ")";
         $skipped = "(" . implode("|", $this->exceptionsSkippedS1000) . ")";
         
