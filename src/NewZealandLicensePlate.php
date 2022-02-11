@@ -103,6 +103,7 @@ class NewZealandLicensePlate extends AbstractLicensePlate implements LicensePlat
          * Some information related to the sidecodes and licenseplates from New Zealands.
          *
          * More info: https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_New_Zealand
+         * Official: https://www.nzta.govt.nz/roads-and-rail/research-and-data/fascinating-facts/number-plates/
          *
          * @return bool|int|string
          */
@@ -110,7 +111,7 @@ class NewZealandLicensePlate extends AbstractLicensePlate implements LicensePlat
             // Cars and heavy vehicles
             1  => "/^((?!{$skipped})[A-Za-z]{2})([1-9][0-9]{0,4})$/ui",              // 1964 - 1996.
             2  => "/^((?={$skipped})[A-Za-z]{2})([1-9][0-9]{0,4})$/ui",              // 1996 - 2001.
-            // Still need to fix starting point of the plate UR for correctness and exceptions 1 to 3. 
+            // Needs fix starting point of the plate UR for correctness and exceptions 1 to 3. 
             3  => "/^((?!{$skipped})[a-zA-Z]{2})([1-9]\d\d\d)$/ui",                  // 1996 - 2001.
             4  => "/^((?!{$exceptionsThreeLetterRegex})[A-Za-z]{3})([1-9]\d\d)$/ui", // 2001 - now.
             // Caravans and trailers
