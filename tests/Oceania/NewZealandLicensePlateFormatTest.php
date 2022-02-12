@@ -14,9 +14,6 @@ class NewZealandLicensePlateFormatTest extends TestCase
     
     public function testFormatLicensePlatesFrom1996To2001()
     {
-
-        // TODO fix sidecode 1-3 exceptions
-
         $licenseplate = new NewZealandLicensePlate('W u 954');
         $this->assertEquals($licenseplate->format(), "WU954");
         $this->assertTrue($licenseplate->isValid());

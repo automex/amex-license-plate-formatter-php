@@ -34,6 +34,9 @@ This library can be used to validate and format license plate numbers.
 ## Oceania
 * New Zealand (1964-now)
 
+## South America
+* Brazil (1990-now)
+
 ## More
 * More countries will be added in the future
 
