@@ -24,12 +24,15 @@ This library can be used to validate and format license plate numbers.
 * Spain (1900-now)
 * United Kingdom (1903-now)
 
-## Asia
-* Israel (unknown date-now)
-
 ## Africa
 * Central African Republic (2006-now)
 * Gabon (1962-now)
+
+## Asia
+* Israel (unknown date-now)
+
+## Oceania
+* New Zealand (1964-now)
 
 ## More
 * More countries will be added in the future
