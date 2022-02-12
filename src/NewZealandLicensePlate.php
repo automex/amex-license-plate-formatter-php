@@ -112,7 +112,7 @@ class NewZealandLicensePlate extends AbstractLicensePlate implements LicensePlat
         
         $exceptionsTwoLetterRegex = "(" . implode("|", $this->exceptionsTwoLetters) . "|" . implode("|", $this->exceptions2001) . "|" . implode("|", $this->combi1996to2001) . ")";
         $exceptionsThreeLetterRegex = "(" . implode("|", $this->exceptionsThreeLetters) . ")";
-        $exceptions01 = "(" . implode("|", $this->exceptions2001) . ")";
+        $exceptions01 = "(" . implode("|", $this->exceptions2001) . "|" . implode("|", $this->exceptionsTwoLetters) . ")";
         $exceptions64to96 = "(" . implode("|", $this->combi1996to2001) . ")";
         
         /**
