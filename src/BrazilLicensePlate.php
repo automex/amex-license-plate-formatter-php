@@ -57,7 +57,7 @@ class BrazilLicensePlate extends AbstractLicensePlate implements LicensePlateInt
                 break;
             default:
                 return $parts[1] . '' . $parts[2];
-            break;
+                break;
         }
     }
     
