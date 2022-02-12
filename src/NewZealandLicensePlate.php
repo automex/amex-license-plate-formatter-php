@@ -127,7 +127,6 @@ class NewZealandLicensePlate extends AbstractLicensePlate implements LicensePlat
             // Cars and heavy vehicles
             1  => "/^((?!{$exceptionsTwoLetterRegex})[A-Za-z]{2})([1-9][0-9]{0,4})$/ui", // 1964 - 1996.
             2  => "/^((?={$exceptions01})[A-Za-z]{2})([1-9][0-9]{0,4})$/ui",             // 1996 - 2001.
-            // Needs fix starting point of the plate UR for correctness and exceptions 1 to 3. 
             3  => "/^((?!{$exceptions01})[a-zA-Z]{2})([1-9]\d\d\d)$/ui",                 // 1996 - 2001.
             4  => "/^((?!{$exceptionsThreeLetterRegex})[A-Za-z]{3})([1-9]\d\d)$/ui",     // 2001 - now.
             // Caravans and trailers
