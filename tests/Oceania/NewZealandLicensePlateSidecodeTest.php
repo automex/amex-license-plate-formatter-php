@@ -38,8 +38,8 @@ class NewZealandLicensePlateSidecodeTest extends TestCase
             ['7 H EB', 12],
             ['38 f gh', 12],
             ['A7 F vk', 13],
-			['fb 3287', 1],
-			['ur 4787', 3],
+            ['fb 3287', 1],
+            ['ur 4787', 3],
         ];
     }    
 }
